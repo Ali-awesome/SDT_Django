@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sport 1: {{sport1}}</h1>
+    <h1>Sport 2: {{sport2}}</h1>
+    <h1>Sport 3: {{sport3}}</h1>
+    {% comment %} Checkout template filtering in google {% endcomment %}
+    {% for i in person %} {% if i.age < 25 %}
+    <h1>When Age is less then 25</h1>
+    <h1>{{i.name}}:-{{i.job}}</h1>
+    <h1>When Age is greater or equal to 25</h1>
+    {% elif i.age >= 25 %}
+    <h1>{{i.name}}:-{{i.job}}</h1>
+    {% endif %} {% endfor %}
+  </body>
+</html>
